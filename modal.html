@@ -1,0 +1,83 @@
+<?php
+//include('login.php'); // Includes Login Script
+
+
+//if(isset($_SESSION['login_user'])){
+//header("location: profile.php");
+//}
+?>
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" align="center">
+          <strong>LOGIN</strong>
+          
+        
+          
+          
+        
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </div>
+                
+<!-- Begin # DIV Form -->
+     <div id="div-forms">
+    
+         <!-- Begin # Login Form -->
+         <form id="login" action="" method="post">
+         <div class="modal-body">
+     <div id="div-login-msg">
+                     
+     <input id="email" name="email" class="form-control" type="text" placeholder="Email" required>
+     <input id="password" name="password" class="form-control" type="password" placeholder="Password" required>
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox">Remember me
+                     </label>
+                 </div>
+       </div>
+     </div>
+     <div class="modal-footer">
+                 <div>
+                     <input name='submit' type='submit' value='Login' class="form-control btn btn-primary">   
+
+   <?php //if(isset($_SESSION['login_user'])):?>
+  <script> //$("#login-modal").modal("show");</script>
+<?php // endif;?>
+
+<?php
+
+if(isset($_SESSION['show_modal']))
+{
+  echo "<script> $('#login-modal').modal('show');</script>";
+  $_SESSION['show_modal']=NULL;
+}
+
+
+
+
+?>
+
+ <?php echo $error ?>
+
+                 </div>
+              
+       <div>
+          <a href="Register.php">Register</a>
+                 </div>
+     </div>
+         </form>
+         <!-- End # Login Form -->
+          </div>
+     <!-- End # DIV Form -->
+                
+      </div>
+    </div>
+  </div>
+    <!-- END # MODAL LOGIN -->
+
+
+
